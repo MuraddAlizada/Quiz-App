@@ -1,0 +1,451 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  background: linear-gradient(to right, #fdfcfb, #e2d1c3);
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 100vh;
+}
+
+#questionsAnswers {
+  width: 500px;
+  padding: 20px;
+  min-height: 100px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  display: none;
+  border: 2px solid black;
+  border-radius: 15px;
+  transition: transform 0.5s, border-color 3s infinite;
+}
+
+#questionsAnswers:hover {
+  transform: scale(1.1);
+}
+
+#questionsAnswers.active {
+  animation: borderChange 3s infinite;
+}
+
+.qa_header {
+  background-color: #d1bcab;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  margin: -20px -20px 20px;
+  border-radius: 15px 15px 0 0;
+  font-size: 20px;
+}
+
+.qa_box {
+  display: none;
+  opacity: 0;
+  animation: questionChange 1s forwards;
+}
+
+.qa_box.active {
+  opacity: 1;
+  display: block;
+}
+
+@keyframes questionChange {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes borderChange {
+  0% {
+    border-color: #cab09e;
+  }
+  50% {
+    border-color: #d0b7a3;
+  }
+  100% {
+    border-color: #b49073;
+  }
+}
+
+.qa_box h4 {
+  margin: 0 0 15px;
+  font-size: 20px;
+}
+
+.answers {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.answers input {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.answers span {
+  display: block;
+  padding: 8px 15px;
+  background-color: #bad0c9;
+  border-radius: 15px;
+  transition: all 0.3s ease-out;
+}
+
+.answers:hover span {
+  background-color: #9ab5ac;
+}
+
+.answers input:checked+span {
+  background-color: #f93c3c;
+}
+
+.answers input[valid]:checked+span {
+  background-color: green;
+  color: #fff;
+}
+
+.qa_footer {
+  padding: 10px 0 0;
+  text-align: center;
+}
+
+.btn1 {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  padding: 8px 20px;
+  background-color: #e2d1c3;
+  color: #000;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  
+}
+
+.btn1:hover {
+  background-color: #d1bcab;
+}
+
+#totalScore {
+  display: none;
+}
+
+.start-screen {
+  display: flex;
+  justify-content: center;
+  background-color: #e2d1c3;
+  color: #fff;
+  text-align: center;
+  padding: 50px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes borderChange {
+  0% {
+    border-color: #cab09e;
+  }
+  50% {
+    border-color: #d0b7a3;
+  }
+  100% {
+    border-color: #b49073;
+  }
+}
+
+#inputName,
+#inputSurname {
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #e2d1c3;
+  transition: border-color 0.3s;
+}
+
+.start-screen,
+.start-screen-content,
+#questionsAnswers:hover {
+  border: 2px solid black;
+  border-radius: 15px;
+  transition: transform 0.5s;
+}
+
+.start-screen:hover,
+.start-screen-content:hover,
+#questionsAnswers:hover {
+  transform: scale(1.1);
+}
+
+.start-screen,
+.start-screen-content,
+#questionsAnswers:hover {
+  animation: borderChange 3s infinite;
+}
+
+.start-screen-content {
+  text-align: center;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.5s, box-shadow 0.5s;
+}
+
+.start-screen-content:hover {
+  background-color: rgba(255, 255, 255, 0.681);
+  box-shadow: 0 0 20px #b49073;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+p {
+  font-size: 18px;
+}
+
+input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#startScreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#startGameBtn {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto; 
+  width: fit-content;
+  background-color: #e2d1c3;
+  color: #000;
+  padding: 20px 50px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  animation: startbutton 4s infinite;
+}
+
+#startGameBtn:hover {
+  background-color: #d1bcab;
+}
+
+@keyframes startbutton {
+  0% {
+    color: #cab09e;
+  }
+   50% {
+    color: #d0b7a3;
+  }
+   100% {
+    color: #b49073;
+  }
+}
+
+.start-screen-content h2 {
+  font-size: 36px;
+  animation: starth2 4s infinite;
+}
+
+.start-screen-content p {
+  font-size: 20px;
+  animation: startp 4s infinite;
+}
+
+@keyframes starth2 {
+  0% {
+    color: #cab09e;
+  }
+  50% {
+    color: #d0b7a3;
+  }
+  100% {
+    color: #b49073;
+  }
+}
+
+@keyframes startp {
+  0% {
+    color: #cab09e;
+  }
+  50% {
+    color: #d0b7a3;
+  }
+  100% {
+    color: #b49073;
+  }
+}
+
+.end-message {
+  position: fixed;
+  text-align: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 1000;
+  animation: fadeIn 0.5s ease-out, textAndBorderChange 2s infinite;
+  border: 2px solid #d1bcab;
+}
+
+.end-message:hover {
+  transition: transform 0.5s ease-in-out; 
+}
+
+@keyframes textAndBorderChange {
+  0% {
+    border-color: #cab09e;
+  }
+  50% {
+    border-color: #d0b7a3;
+  }
+  100% {
+    border-color: #b49073;
+  }
+}
+
+.end-message h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 10px;
+  animation: lightUpText 1s ease-in-out infinite alternate;
+}
+
+@keyframes lightUpText {
+  from {
+    color: #e2d1c3;
+  }
+  to {
+    color: #b49073;
+  }
+}
+
+.end-message p,
+.end-message span,
+.end-message .username {
+  opacity: 0;
+  animation: fadeInText 1s ease-in-out forwards;
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.end-message h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 10px;
+  animation-delay: 0.5s;
+}
+
+.end-message p {
+  font-size: 20px;
+  color: #555;
+  margin-top: 10px;
+  animation-delay: 1s;
+}
+
+.end-message span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff5252;
+  animation-delay: 1.5s;
+}
+
+.end-message .pass {
+  color: #00cc00;
+}
+
+.end-message .username {
+  font-size: 20px;
+  color: #ff5252;
+}
+
+.fail {
+  color: red !important;
+}
+
+.pass {
+  color: green;
+}
+
+@keyframes textAndBorderChange {
+  0% {
+    border-color: #cab09e;
+  }
+  50% {
+    border-color: #d0b7a3;
+  }
+  100% {
+    border-color: #b49073;
+  }
+}
+
+.end-message button {
+  display: inline-block;
+  padding: 15px 30px;
+  margin-top: 20px;
+  font-size: 20px;
+  background-color: #e2d1c3;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-out;
+}
+
+.end-message button:hover {
+  background-color: #d1bcab;
+}
+
+#endMessageContainer:hover {
+  transform: scale(1.1);
+}
+
+#progress-bar {
+  width: 100%;
+  height: 30px;
+  background-color: #d1bcab;
+  position: relative;
+  overflow: hidden;
+}
+
+#progress-bar .correct {
+  height: 100%;
+  background-color: green;
+  width: 0%;
+  transition: width 0.3s ease;
+}

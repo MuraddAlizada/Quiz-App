@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiziz</title>
+    <link rel="stylesheet" href="./assets/style/quiz.css" />
+    <link rel="stylesheet" href="./assets/style/reset.css" />
+  </head>
+  <body>
+  
+    <div id="startScreen" class="start-screen">
+     
+      <div class="start-screen-content">
+        <h2>Welcome to the Quiz Game!</h2>
+        <p>Please enter your name and surname to start the game:</p>
+        <input type="text" id="inputName" placeholder="Name" />
+        <input type="text" id="inputSurname" placeholder="Surname" />
+        <button id="startGameBtn" class="btn1">Start Game</button>
+      </div>
+    </div>
+
+    <div id="questionsAnswers">
+     
+      <div class="qa_header">
+        <span>Score:<span id="score">0</span></span>
+        <div id="countDown">0</div>
+      </div>
+      <div class="qa_body">
+        
+        <div class="qa_box active">
+          <h4>1.What does HTML stand for?</h4>
+          <div class="answers">
+            <input type="radio" name="a1" />
+            <span>Hyperlinks and text markup language</span>
+          </div>
+          <div class="answers">
+            <input type="radio" name="a1" />
+            <span>Home tool markup language</span>
+          </div>
+          <div class="answers">
+            <input type="radio" name="a1" valid="valid" />
+            <span>Hyper text markup language</span>
+          </div>
+          <div class="answers">
+            <input type="radio" name="a1" />
+            <span>Cascading style sheets</span>
+          </div>
+        </div>
+        <div class="qa_box">
+          <h4>2.What is the purpose of the "< head >" element in HTML?</h4>
+          <div class="answers">
+            <input type="radio" name="a1" />
+            <span>It defines the main content of the document.</span>
+          </div>
+          <div class="answers">
+            <input type="radio" name="a1" valid="valid" />
+            <span>It contains metadata about the document.</span>
+          </div>
+          <div class="answers">
+            <input type="radio" name="a1" />
+            <span>It represents a header for a section.</span>
+          </div>
+          <div class="answers">
+            <input type="radio" name="a1" />
+            <span>It defines a navigation link.</span>
+          </div>
+        </div>
+        <div class="qa_box">
+          <h4>3.What does CSS stand for?</h4>
+          <div class="answers">
+            <input type="radio" name="a1" />
+            <span>Computer Style Sheets</span>
+          </div>
+          <div class="answers">
+            <input type="radio" name="a1" />
+            <span>Creative Style Sheets</span>
+          </div>
+          <div class="answers">
+            <input type="radio" name="a1" valid="valid" />
+            <span>Cascading Style Sheets.</span>
+          </div>
+          <div class="answers">
+            <input type="radio" name="a1" />
+            <span>Colorful Style Sheets</span>
+          </div>
+        </div>
+        <div class="qa_box">
+          <h4>4.What does the margin property in CSS control?</h4>
+          <div class="answers">
+            <input type="radio" name="a1" valid="valid" />
+            <span>The space between elements borders</span>
+          </div>
+          <div class="answers">
+            <input type="radio" name="a1" />
+            <span>The padding inside an element</span>
+          </div>
+          <div class="answers">
+            <input type="radio" name="a1" />
+            <span>The width of an element.</span>
+          </div>
+          <div class="answers">
+            <input type="radio" name="a1" />
+            <span>The color of the text</span>
+          </div>
+        </div>
+        <div class="qa_box">
+          <h4>
+            5.How do you add a click event listener to an HTML button with the
+            id "myButton" in JavaScript?
+          </h4>
+          <div class="answers">
+            <input type="radio" name="a1" valid="valid" />
+            <span>
+              document.getElementById("myButton").addEventListener("click",
+              myFunction);</span
+            >
+          </div>
+          <div class="answers">
+            <input type="radio" name="a1" />
+            <span> button.addEventListener("click", myFunction);</span>
+          </div>
+          <div class="answers">
+            <input type="radio" name="a1" />
+            <span>myButton.onClick = myFunction;</span>
+          </div>
+          <div class="answers">
+            <input type="radio" name="a1" />
+            <span>onClick("myButton", myFunction);</span>
+          </div>
+        </div>
+        <div id="totalScore"></div>
+      </div>
+
+      <div class="qa_footer">
+        <div id="progress-bar">
+          <div class="correct"></div>
+        </div>
+        
+        
+        </div>
+      </br>
+        <span class="btn1" id="next">Next</span>
+      </div>
+    </div>
+
+  
+
+    <div id="endMessageContainer" class="end-message"></div>
+  </body>
+  <script src="./assets/script/quiz.js"></script>
+</html>
