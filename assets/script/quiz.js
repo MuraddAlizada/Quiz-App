@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let countDown = document.getElementById("countDown");
   let count = 0;
   let scoreCount = 0;
-  let duration = 20; // Updated duration to 20 seconds
+  let duration = 20; 
   let qaBox = document.querySelectorAll(".qa_box");
   let answers = document.querySelectorAll(".qa_box .answers input");
   let progressBar = document.getElementById("progress-bar");
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
     next.addEventListener("click", function () {
       console.log("Skipping to the next question");
       step();
-      duration = 20; // Reset the timer to 20 seconds
+      duration = 20; 
       countDown.innerHTML = `Remaining Time: ${duration} seconds`;
     });
 
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(function () {
           console.log("Moving to the next question after clicking an answer");
           step();
-          duration = 20; // Reset the timer to 20 seconds
+          duration = 20; 
           countDown.innerHTML = `Remaining Time: ${duration} seconds`;
         }, 500);
 
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function step() {
     count += 1;
-    duration = 20; // Reset the timer to 20 seconds
+    duration = 20; 
     countDown.innerHTML = `Remaining Time: ${duration} seconds`;
 
     for (let i = 0; i < qaBox.length; i++) {
